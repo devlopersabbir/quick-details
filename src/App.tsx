@@ -12,6 +12,7 @@ function App() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return alert('window is undefined')
+
     const nav = window.navigator
     if (nav) {
       nav.geolocation.getCurrentPosition(
