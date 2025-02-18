@@ -67,8 +67,10 @@ function App() {
               {selectedLocation && myLocation ? (
                 <LocationMap startLocation={myLocation} endLocation={selectedLocation} />
               ) : (
-                <div className="h-full flex items-center justify-center text-muted-foreground">
-                  <p>Select a location to view on the map</p>
+                <div className="h-full flex items-center justify-center text-muted-foreground bg-[url(/map.jpg)] bg-center bg-no-repeat bg-cover relative">
+                  <div className="absolute inset-0 backdrop-blur-[5px] flex justify-center items-center bg-opacity-50 bg-black">
+                    <h1 className="text-2xl">Select a location to view on the map</h1>
+                  </div>
                 </div>
               )}
             </div>

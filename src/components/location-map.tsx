@@ -59,11 +59,6 @@ export default function LocationMap({ startLocation, endLocation }: LocationMapP
         // Decode the polyline points
         const decodedPoints = polyline.decode(path.points)
 
-        // Convert decoded coordinates to LatLngTuple for Leaflet
-        // const coordinates: LatLngTuple[] = decodedPoints.map(
-        //   (coord: [number, number]) => [coord[0], coord[1]] as LatLngTuple
-        // )
-
         const coordinates: LatLngTuple[] = decodedPoints.map((coord) => [coord[0], coord[1]])
 
         const distanceKm = (path.distance / 1000).toFixed(2)
